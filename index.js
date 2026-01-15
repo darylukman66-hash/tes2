@@ -163,7 +163,7 @@ window.removeRow = function(btn) {
 
 window.downloadCSV = function() {
     const rows = document.querySelectorAll("#dataTable tr");
-    let csvContent = "";
+    let csvContent = " ";
     rows.forEach((row, rowIndex) => {
         let rowData = [];
         const cols = row.querySelectorAll("th, td");
@@ -185,7 +185,7 @@ window.downloadCSV = function() {
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.setAttribute("href", url);
-    link.setAttribute("download", `Alter Service Config Item.csv`);
+    link.setAttribute("download", `Alter Service Config Item.`);
     link.click();
 };
 
